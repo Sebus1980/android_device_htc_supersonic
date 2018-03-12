@@ -1,8 +1,8 @@
-# Inherit AOSP device configuration for supersonic.
-$(call inherit-product, device/htc/supersonic/device_supersonic.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some CDMA stuff.
-$(call inherit-product, vendor/omni/config/cdma.mk)
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
 #
 # Setup device specific product configuration.
