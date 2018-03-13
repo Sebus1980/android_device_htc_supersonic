@@ -62,8 +62,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_VENDOR := htc
 
 # TWRP specific build flags
-TARGET_RECOVERY_DEVICE_MODULES := chargeled # tzdata
-# TW_RECOVERY_ADDITIONAL_RELINK_FILES := $(OUT)/system/usr/share/zoneinfo/tzdata
+BOARD_HAS_NO_REAL_SDCARD := true
+TARGET_RECOVERY_DEVICE_MODULES := chargeled tzdata
+TW_RECOVERY_ADDITIONAL_RELINK_FILES := $(OUT)/system/usr/share/zoneinfo/tzdata
 TW_THEME := portrait_mdpi
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_EXCLUDE_DEFAULT_USB_INIT := true
